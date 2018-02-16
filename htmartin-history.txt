@@ -283,9 +283,9 @@
   302  ls
   303  mkdir spark-with-hdfs
   304  subl docker-compose.yml
-  305  curl -L -o trips.csv https://goo.gl/MVNVhW
+  305  curl -L -o trips.csv https://goo.gl/huLPbo
   306  cd spark-with-hdfs/
-  307  curl -L -o trips.csv https://goo.gl/MVNVhW
+  307  curl -L -o trips.csv https://goo.gl/huLPbo
   308  docker-compose up -d
   309  docker-compose logs -f myhdfs
   310  docker-compose exec myhdfs hadoop fs -ls /tmp/
@@ -298,13 +298,13 @@
   317  subl docker-compose.yml
   318  cd kafka-with-json/
   319  subl docker-compose.yml
-  320  curl -L -o github-example-large.json https://goo.gl/WewtYn
+  320  curl -L -o github-example-large.json https://goo.gl/Hr6erG
   321  docker-compose up -d
   322  docker-compose logs -f kafka
   323  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
   324  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
   325  docker-compose exec mids bash -c "cat /w205/github-example-large.json"
-  326  curl -L -o github-example-large.json https://goo.gl/WewtYn
+  326  curl -L -o github-example-large.json https://goo.gl/Hr6erG
   327  docker-compose exec mids bash -c "cat /w205/kafka-with-json/github-example-large.json"
   328  docker-compose exec mids bash -c "cat /w205/kafka-with-json/github-example-large.json | jq '.'"
   329  docker-compose exec mids bash -c "cat /w205/kafka-with-json/github-example-large.json | jq '.[]' -c"
@@ -312,7 +312,7 @@
   331  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
   332  docker-compose exec mids bash -c "cat /w205/kafka-with-json/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
   333  cd ..
-  334  curl -L -o github-example-large.json https://goo.gl/WewtYn
+  334  curl -L -o github-example-large.json https://goo.gl/Hr6erG
   335  cd kafka-with-json/
   336  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e"
   337  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic foo --from-beginning --max-messages 42
@@ -483,7 +483,7 @@
   502  ls
   503  vi docker-compose.yml 
   504  cd ..
-  505      curl -L -o github-example-large.json https://goo.gl/WewtYn
+  505      curl -L -o github-example-large.json https://goo.gl/Hr6erG
   506  cd kafka-with-json/
   507  docker-compose up -d
   508  docker-compose logs -f kafka

@@ -17,7 +17,7 @@ ________________________________________________________________________________
 
 #### Get the data:
 
-    curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/GGRvoh
+    curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/f5bRm4
 
 #### Use this docker-compose exec command:
 

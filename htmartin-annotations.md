@@ -8,7 +8,7 @@
   502  ls
 
 ## Here I'm getting the data.
-  505      curl -L -o github-example-large.json https://goo.gl/WewtYn
+  505      curl -L -o github-example-large.json https://goo.gl/Hr6erG
 
 ## I'm spinning up my kafka, zookeeper, mids cluster.
   507  docker-compose up -d
